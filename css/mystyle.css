@@ -1,0 +1,348 @@
+body{
+    background-color: #88867e;
+}
+
+.bg-custom{
+    background-color: #292929;
+}
+
+.nav-link{
+    color: #fff !important;
+}
+.nav-item:hover{
+    cursor:pointer;
+    font-style:oblique; 
+    font-weight: 600;
+    font-size: larger;
+}
+
+.navbar {
+    display: inline-flex;
+    list-style: none;
+       
+}
+
+.navbar .menu li:hover {
+    cursor:pointer;
+    font-style:oblique; 
+    font-weight: 600;
+ }
+ 
+ .navbar li {
+     margin: 0 10px;
+     position: relative;
+ }
+ .navbar li a {
+     color: white;
+     text-decoration: none;
+ }
+ .navbar li .dropdown {
+     display: none;
+     position: absolute;
+     top: 100%;
+     left: 0;
+     background-color: #444;
+     list-style: none;
+     padding: 10px;
+ }
+ .navbar li:hover .dropdown {
+     display: block;
+ }
+ .navbar li .dropdown li {
+     margin: 5px 0;
+ }
+
+.jumbotron{
+    background-image: url('../images/Moraine\ Lake.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 91vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+       
+}
+
+        /* Animation Text */
+#hero #animtext:after {
+    content:"";
+    animation-name: animtext;
+    animation-duration: 2s;     /*100/5=20 i.e 0.2 seconds*/
+    animation-iteration-count: infinite;
+}
+
+@keyframes animtext
+{
+    17%{
+        content:"India";
+        color:crimson;
+    }
+    34%{
+        content:"Brazile";
+        color:olivedrab;
+    }
+    51%{
+        content:"Australia";
+        color:violet;
+    }
+    68%{
+        content:"Germani";
+        color:ivory;
+    }
+    85%{
+        content: "Japan";
+        color:goldenrod;
+    }
+    100%{
+        contecnt: "Canada";
+        color:lemonchiffon;
+    }
+}
+
+#textbck h1{    
+    color: #fcde58;
+    text-shadow: 2px 2px 3px #000;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;     
+    font-size: 5rem;
+    
+}
+
+#textbck h2{    
+    color: #eee3b5;
+    text-shadow: 2px 2px 3px #000;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;     
+    font-size: 3rem;
+    margin-top: 20px;
+    
+}
+
+#textbck hr{
+    width: 60%;
+    background-color: #fff;
+    height: 5px;  
+    margin: 0 auto;
+}
+
+
+.btn{
+    box-shadow: 3px 2px 5px #000;
+}
+
+.card img:hover{
+    opacity: 0.5;
+    
+}
+
+  /* FORM SECTION */
+  #bkform form {
+    display: flex;
+    flex-direction:column;
+    
+}
+    
+#bkform label, #bkform input, #bkform select, #bkform textarea, #bkform button {
+    margin-bottom: 10px;
+}
+.column {
+    width: 48%;
+}
+
+#booknow .row{
+    background-color: #1ea7d9;
+    border: #0445bd;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 2px 3px 5px #000;
+    box-shadow: -2px -3px -15px #000;
+    padding: 20px;
+}
+
+#booking-form label{
+    text-align: left;
+    font-size: 1.2rem;
+    color: #f7f2d7;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px #000000;
+}
+
+#booking-form button{
+    background-color: #f7f2d7;
+    color: #0498bd;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 15px;
+    padding: 5px;
+    border-color: #0905eb;
+}
+
+#booking-form button:hover{
+    background-color: #0905eb;
+    color: #f7f0ec;
+    
+}
+
+/*Package Gallery*/
+#package h1 span, #booknow h1 span{
+    text-align: center;
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+    text-decoration: underline;
+    color: #0498bd;
+}
+
+#package hr, #booknow hr{
+    width: 30%;
+    background-color: #0445bd;
+    height: 2px;  
+    margin: 0 auto;
+    
+}
+
+#package i{
+    color: rgb(243, 160, 6);
+}
+
+#package .card{
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: azure;
+    box-shadow: 2px 2px 5px #292929;
+}
+
+#package h1, #booknow h1{
+    text-align: center;
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+}
+
+#packagefooter h5{
+    float: right;
+}
+#packagefooter button{
+    float: left;
+    padding: 5px;
+    border-radius: 5px;
+    border-color: #f7f2d7;
+    color: #292929
+}
+
+#packagefooter button:hover{
+    background-color: #0905eb;
+    color: #f7f0ec; 
+}
+
+button{
+    box-shadow: 1px 2px 3px #352535;
+}
+
+.card p{
+    text-align: justify;
+    font-size: smaller;
+    margin: 20px;
+}
+
+
+
+/* Services Section Sliders */
+.responsive{
+    align-items: center;
+    margin: 20px;
+}
+
+.responsive img{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   object-fit: cover;
+   
+}
+
+.responsive figcaption{
+    text-align: center;
+    margin-top: 20px;
+    max-width: 600px;
+    height: 40px;
+    background-color: #010e13;
+    border: 2px solid #352535;
+    border-radius: 30px;
+    color: #f7f2d7;
+    padding-top: 5px;    
+}
+
+
+
+
+/* Gallery Section */
+
+iframe{
+    width: 100%;
+    height: 90vh;
+}
+
+/* About us */
+
+#infrm{
+    background-color: #292929;
+    color: #f7f0ec;
+    padding: 5px 20px;
+    border-radius: 40px;
+}
+
+#infrm h1, h2{
+    font-family: "Edu Guides";
+}
+
+#infrm p{
+    text-align: justify;
+    padding: 20px;
+}
+
+#rwtxt{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    color: #030450;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px #000000;
+}
+
+@media screen and (max-width:600px ) {
+    #rwtxt{
+        position: relative;
+    }
+}
+
+/* Footer Section */
+#footer{
+    background-color: #0498bd;
+    padding: 30px 0;
+    color: whitesmoke;
+}
+
+#footer a{
+    text-decoration: none;
+    color: whitesmoke;
+    
+}
+
+#footer a:hover{
+    font-weight: bold;
+    color: #000;
+}
+
+.mdicn{
+    align-items: center;
+    justify-content: center;
+    size: 150px;
+    object-fit: contain;
+}
+
+/* REGISTRATION PART */
+
+.form-control{
+    margin-bottom: 20px;
+}

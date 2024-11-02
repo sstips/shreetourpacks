@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --line-offset: calc((10vh + 8px) / 2);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    background: #021919;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    display: flex;
+}
+
+.tab {
+    width: calc(10vh + 8px);
+    height: calc(10vh + 8px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%);
+    shape-outside: polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%);
+    z-index: 0;
+    transition: width 0.5s;
+}
+
+.tab img {
+    width: 10vh;
+    height: 10vh;
+    z-index: 10;
+    cursor: pointer;
+    clip-path: polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%);
+    shape-outside: polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%);
+    transition: width 0.5s;
+}
+
+[type=radio] {
+    display: none;   
+}
+
+.preview-list {
+    background: linear-gradient(
+        #021919,
+        #021919 var(--line-offset),
+        #efefef var(--line-offset)
+    );
+}
+
+.tab {
+    background: linear-gradient(
+        #efefef,
+        #efefef var(--line-offset),
+        #021919 var(--line-offset)
+    );
+}
+
+.tab:hover{
+    transform: scale(1.2);
+}
+
+[type=radio]:checked ~ label ~ .content{
+    text-align: center;
+    z-index: 8;
+}
+
+
+[type=radio]:checked ~ label .tab{
+    width: 0;
+}
+
+.content {
+    position: absolute;
+    background: #021919;
+    top: 1vh;
+    left: 0;
+    width: 100vw;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.content img {
+    height: auto;
+    width: 100vw;  
+}
+
+#sldtext{
+    position: absolute;
+    top: 40%;
+    left: 32%;
+    color: #23046b;
+    background-color: rgba(222, 241, 245, 0.6);
+    border-radius: 40px;
+    padding: 10px;
+    width: 600px;
+    font-size: 20px;
+}
+
+#sldtext p{
+    text-align: justify;
+}
+    </style>
+</head>
+<body>
+    <div class="container col-md-6">
+        <div class="full-view col-md-6" ></div>
+        <div class="preview-list col-md-6">
+            <ul>
+                <li>
+                    <input type="radio" id="tab-1" name="gallery-group">
+                    <label for="tab-1">
+                        <div class="tab">
+                            <img
+                                src="./images/slide1.jpg" />
+                        </div>
+                    </label>
+                    <div class="content col-md-6">
+                        <div id="sldtext">
+                            <h1>First Slide</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quos voluptatibus rerum vero error cumque pariatur autem ipsa nulla. Omnis rem magnam alias aliquam corporis deserunt expedita, architecto minima quae.</p>
+                        </div>                        
+                        <img
+                            src="./images/slide1.jpg" />
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" id="tab-2" name="gallery-group">
+                    <label for="tab-2">
+                        <div class="tab">
+                            <img
+                                src="./images/slide2.jpg" />
+                        </div>
+                    </label>
+                    <div class="content col-md-6">
+                        <div id="sldtext">
+                            <h1>Second Slide</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quos voluptatibus rerum vero error cumque pariatur autem ipsa nulla. Omnis rem magnam alias aliquam corporis deserunt expedita, architecto minima quae.</p>
+                        </div>
+                        <img
+                            src="./images/slide2.jpg" />
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" id="tab-3" name="gallery-group">
+                    <label for="tab-3">
+                        <div class="tab">
+                            <img
+                                src="./images/slide3.jpg" />
+                        </div>
+                    </label>
+                    <div class="content col-md-6">
+                        <div id="sldtext">
+                            <h1>Third Slide</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quos voluptatibus rerum vero error cumque pariatur autem ipsa nulla. Omnis rem magnam alias aliquam corporis deserunt expedita, architecto minima quae.</p>
+                        </div>
+                        <img
+                            src="./images/slide3.jpg" />
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" id="tab-4" name="gallery-group" checked>
+                    <label for="tab-4">
+                        <div class="tab">
+                            <img
+                                src="./images/slide4.jpg" />
+                        </div>
+                    </label>
+                    <div class="content col-md-6">
+                        <div id="sldtext">
+                            <h1>Forth Slide</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quos voluptatibus rerum vero error cumque pariatur autem ipsa nulla. Omnis rem magnam alias aliquam corporis deserunt expedita, architecto minima quae.</p>
+                        </div>
+                        <img src="./images/slide4.jpg" />
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" id="tab-5" name="gallery-group">
+                    <label for="tab-5">
+                        <div class="tab">
+                            <img
+                                src="./images/slide5.jpg" />
+                        </div>
+                    </label>
+                    <div class="content col-md-6">
+                        <div id="sldtext">
+                            <h1>Fifth Slide</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quos voluptatibus rerum vero error cumque pariatur autem ipsa nulla. Omnis rem magnam alias aliquam corporis deserunt expedita, architecto minima quae.</p>
+                        </div>
+                            <img src="./images/slide5.jpg" />
+                        </div>
+                </li>
+                <li>
+                    <input type="radio" id="tab-6" name="gallery-group">
+                    <label for="tab-6">
+                        <div class="tab">
+                            <img
+                                src="./images/slide6.jpg" />
+                        </div>
+                    </label>
+                    <div class="content col-md-6">
+                        <div id="sldtext">
+                            <h1>Sixth Slide</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quos voluptatibus rerum vero error cumque pariatur autem ipsa nulla. Omnis rem magnam alias aliquam corporis deserunt expedita, architecto minima quae.</p>
+                        </div>
+                            <img src="./images/slide6.jpg" />
+                        </div>
+                </li>
+                <li>
+                    <input type="radio" id="tab-7" name="gallery-group">
+                    <label for="tab-7">
+                        <div class="tab">
+                            <img
+                                src="./images/slide7.jpg" />
+                        </div>
+                    </label>
+                    <div class="content col-md-6">
+                        <div id="sldtext">
+                            <h1>Seventh Slide</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quos voluptatibus rerum vero error cumque pariatur autem ipsa nulla. Omnis rem magnam alias aliquam corporis deserunt expedita, architecto minima quae.</p>
+                        </div>
+                            <img src="./images/slide7.jpg" />
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
